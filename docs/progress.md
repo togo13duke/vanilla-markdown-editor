@@ -12,3 +12,18 @@
   - フェーズ6: `npm run lint` / `npm run format` 実行（T031-T032）、手動チェック（T033）、境界値テスト（T034）、不要ログ削除（T035）
 - 補足:
   - `npm run dev` は起動確認後に停止（長時間プロセスのため）
+
+## 002-markdown-parser
+
+- 状態: 完了（手動確認済み）
+- 完了:
+  - フェーズ1: Setup（T001-T002）
+  - フェーズ2: Foundational（T003-T005）
+  - フェーズ3: US1 リアルタイムプレビュー（T006-T013）
+  - フェーズ4: US2 XSS対策（T014-T017）
+  - フェーズ5: US3 Markdown記法（T018-T024）
+  - フェーズ6: US4 エラーハンドリング（T025-T027）
+  - フェーズ7: ESLint/Prettier、JSDoc追加、受け入れ確認（T029-T034）
+- 補足:
+  - 手動確認: `specs/002-markdown-parser/quickstart.md` の手順で動作確認済み
+  - XSS確認: `<script>` 等の入力が実行されずテキスト表示されることを確認

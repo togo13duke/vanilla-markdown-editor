@@ -238,6 +238,38 @@ textarea {
   color: var(--text-muted);
 }
 
+.preview-content strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.preview-content em {
+  color: var(--text-primary);
+  font-style: italic;
+}
+
+.preview-content code {
+  background: var(--bg-muted);
+  padding: 0 4px;
+  border-radius: 6px;
+  font-family: 'Fira Code', 'SFMono-Regular', 'Consolas', monospace;
+  font-size: 0.9em;
+}
+
+.preview-content pre {
+  background: var(--bg-muted);
+  padding: 12px;
+  border-radius: 12px;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+.preview-content pre code {
+  background: transparent;
+  padding: 0;
+  display: block;
+}
+
 body[data-layout='mobile'] .mobile-tabs {
   display: flex;
 }
