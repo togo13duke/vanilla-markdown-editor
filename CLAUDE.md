@@ -85,6 +85,7 @@ See `docs/sprint.md` for milestone definitions:
 ## Active Technologies
 - JavaScript (ES2020+) + なし（Vanilla JS、開発ツールはVite/ESLint/Prettierのみ） (002-markdown-parser)
 - N/A（このスプリントでは永続化なし） (002-markdown-parser)
+- IndexedDB（ブラウザ内永続化） (003-file-management)
 
 ## Recent Changes
 - 002-markdown-parser: Added JavaScript (ES2020+) + なし（Vanilla JS、開発ツールはVite/ESLint/Prettierのみ）
