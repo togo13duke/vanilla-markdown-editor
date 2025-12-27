@@ -1,0 +1,6 @@
+import './style.css';
+import { initLayout } from './ui/layout.js';
+import { initTheme } from './ui/theme.js';
+
+initLayout();
+initTheme();
