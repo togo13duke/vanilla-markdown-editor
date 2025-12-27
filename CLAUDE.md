@@ -81,3 +81,10 @@ See `docs/sprint.md` for milestone definitions:
 - S4: Auto-save, debounce, shortcuts
 - S5: Web Worker optimization
 - S6: Clipboard, Outline, polish
+
+## Active Technologies
+- JavaScript (ES2020+) + なし（Vanilla JS、開発ツールはVite/ESLint/Prettierのみ） (002-markdown-parser)
+- N/A（このスプリントでは永続化なし） (002-markdown-parser)
+
+## Recent Changes
+- 002-markdown-parser: Added JavaScript (ES2020+) + なし（Vanilla JS、開発ツールはVite/ESLint/Prettierのみ）
