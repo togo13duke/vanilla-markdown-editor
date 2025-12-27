@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>バニラMarkdownエディタ</title>
+  </head>
+  <body>
+    <div class="app" id="app">
+      <header class="app-header">
+        <div class="app-title">バニラMarkdownエディタ</div>
+        <div class="app-actions">
+          <button type="button" class="action-button">保存</button>
+          <button type="button" class="action-button">エクスポート</button>
+          <button type="button" class="action-button">設定</button>
+        </div>
+      </header>
+      <div class="app-main">
+        <div class="mobile-tabs" role="tablist" aria-label="表示切替">
+          <button
+            type="button"
+            class="tab-button"
+            data-pane="editor"
+            aria-selected="true"
+          >
+            エディタ
+          </button>
+          <button
+            type="button"
+            class="tab-button"
+            data-pane="preview"
+            aria-selected="false"
+          >
+            プレビュー
+          </button>
+        </div>
+        <div class="pane-grid">
+          <aside
+            class="sidebar pane"
+            data-pane="files"
+            aria-label="ファイル一覧"
+          >
+            <div class="pane-header">
+              <span>ファイル</span>
+              <button
+                type="button"
+                class="icon-button"
+                aria-label="新規ファイル"
+              >
+                ＋
+              </button>
+            </div>
+            <ul class="file-list">
+              <li class="file-item is-active">README.md</li>
+              <li class="file-item">メモ.md</li>
+            </ul>
+          </aside>
+          <section class="editor pane" data-pane="editor" aria-label="エディタ">
+            <div class="pane-header">エディタ</div>
+            <textarea
+              class="editor-input"
+              placeholder="Markdownを入力してください..."
+            ></textarea>
+          </section>
+          <section
+            class="preview pane"
+            data-pane="preview"
+            aria-label="プレビュー"
+          >
+            <div class="pane-header">プレビュー</div>
+            <div class="preview-content">
+              <p>ここにプレビューが表示されます。</p>
+              <p>見出し、強調、リンクなどが反映される想定です。</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
