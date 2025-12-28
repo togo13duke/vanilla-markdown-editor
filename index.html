@@ -9,11 +9,6 @@
     <div class="app" id="app">
       <header class="app-header">
         <div class="app-title">バニラMarkdownエディタ</div>
-        <div class="app-actions">
-          <button type="button" class="action-button">保存</button>
-          <button type="button" class="action-button">エクスポート</button>
-          <button type="button" class="action-button">設定</button>
-        </div>
       </header>
       <div class="app-main">
         <div class="mobile-tabs" role="tablist" aria-label="表示切替">
@@ -42,18 +37,24 @@
           >
             <div class="pane-header">
               <span>ファイル</span>
-              <button
-                type="button"
-                class="icon-button"
-                aria-label="新規ファイル"
-              >
-                ＋
-              </button>
+              <div class="file-actions">
+                <button
+                  type="button"
+                  class="icon-button new-file-button"
+                  aria-label="新規ファイル"
+                >
+                  ＋
+                </button>
+                <button
+                  type="button"
+                  class="icon-button file-export-button"
+                  aria-label="ファイルをエクスポート"
+                >
+                  ↓
+                </button>
+              </div>
             </div>
-            <ul class="file-list">
-              <li class="file-item is-active">README.md</li>
-              <li class="file-item">メモ.md</li>
-            </ul>
+            <ul class="file-list"></ul>
           </aside>
           <section class="editor pane" data-pane="editor" aria-label="エディタ">
             <div class="pane-header">エディタ</div>
