@@ -8,6 +8,8 @@ const defaultCallbacks = {
   onFilesChanged: () => {},
   onActiveFileChanged: () => {},
   onError: () => {},
+  onSaveSuccess: () => {},
+  onSaveError: () => {},
 };
 
 const state = {
@@ -198,8 +200,12 @@ export const fileService = {
       state.activeFile = updated;
       setFiles(replaceFile(state.files, updated));
       state.isDirty = false;
+      state.callbacks.onSaveSuccess?.();
     } catch (error) {
       console.error('保存に失敗しました。', error);
+      state.callbacks.onSaveError?.(
+        error instanceof Error ? error.message : '保存に失敗しました。'
+      );
       state.callbacks.onError('保存に失敗しました。');
       throw error;
     }

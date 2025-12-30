@@ -1,7 +1,7 @@
 import { initPreview } from '../services/previewService.js';
 
 export function initBindings(options = {}) {
-  const { fileService } = options;
+  const { fileService, autosaveService } = options;
   const editorElement = document.querySelector('.editor-input');
   const previewElement = document.querySelector('.preview-content');
   const exportButton =
@@ -24,6 +24,9 @@ export function initBindings(options = {}) {
       fileService.updateContent(editorElement.value);
     }
     previewController.update();
+    if (autosaveService) {
+      autosaveService.schedule();
+    }
   };
 
   editorElement.addEventListener('input', handleInput);
